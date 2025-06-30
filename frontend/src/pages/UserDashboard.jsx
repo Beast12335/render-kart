@@ -5,7 +5,7 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Pie } from 'react-chartjs-2';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
+// import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
 import { useForm } from "react-hook-form";
 import { useUser } from "../../context/UserContext";
 import { toast, ToastContainer } from "react-toastify";
