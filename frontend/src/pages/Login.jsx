@@ -4,7 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { toast,ToastContainer } from "react-toastify";
 import { useUser } from "../../context/UserContext.jsx";
+import dotenv from 'dotenv'
+dotenv.config()
 
+const BACKEND = process.env.BACKEND_URL
 export default function LoginPage() {
   const { register, reset, handleSubmit, formState: { errors } } = useForm();
   const [showPassword, setShowPassword] = useState(false);
@@ -16,7 +19,7 @@ export default function LoginPage() {
     reset();
     console.log("Login Data:", form);
     try {
-      const response = await fetch("`${process.env.BACKEND_URL}`/auth/login", {
+      const response = await fetch(`${BACKEND}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
