@@ -14,7 +14,7 @@ import { io } from "socket.io-client";
 
 const socket = io("`${process.env.BACKEND_URL}`");
 
-ChartJS.register(ArcElement, Tooltip, Legend, Title);
+// ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
 export default function Dashboard() {
   const [showMenu, setShowMenu] = useState(false);
